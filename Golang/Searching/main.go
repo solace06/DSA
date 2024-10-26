@@ -28,5 +28,8 @@ func main() {
 	case "L":
 		fmt.Println("Starting Linear Search")
 		linearSearch(arr, size)
+	case "B":
+		fmt.Println("Starting Binary Search")
+		binarySearch(arr, size)
 	}
 }
