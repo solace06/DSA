@@ -28,7 +28,8 @@ func main() {
 	var sort string
 	fmt.Println("Select the type of sort you want to execute")
 	fmt.Println("1.Select A for Bubble Sort")
-	fmt.Println("1.Select B for Selection Sort")
+	fmt.Println("2.Select B for Selection Sort")
+	fmt.Println("3.Select C for Insertion Sort")
 	fmt.Scan(&sort)
 	switch sort{
 	case "A":
@@ -41,6 +42,11 @@ func main() {
 		selectionSort(arr, size)
 		fmt.Println("Sorted Array")
 		printArray(arr,size)
+	case "C":
+		fmt.Println("Starting Insertion Sort")
+		insertionSort(arr, size)
+		fmt.Println("Sorted Array")
+		printArray(arr, size)
 	}
 
 }
