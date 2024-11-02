@@ -30,6 +30,7 @@ func main() {
 	fmt.Println("1.Select A for Bubble Sort")
 	fmt.Println("2.Select B for Selection Sort")
 	fmt.Println("3.Select C for Insertion Sort")
+	fmt.Println("4.Select D for Quick Sort")
 	fmt.Scan(&sort)
 	switch sort{
 	case "A":
@@ -45,6 +46,11 @@ func main() {
 	case "C":
 		fmt.Println("Starting Insertion Sort")
 		insertionSort(arr, size)
+		fmt.Println("Sorted Array")
+		printArray(arr, size)
+	case "D":
+		fmt.Println("Starting Quick Sort")
+		quickSort(arr, 0, size-1)
 		fmt.Println("Sorted Array")
 		printArray(arr, size)
 	}
