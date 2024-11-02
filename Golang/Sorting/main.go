@@ -31,6 +31,7 @@ func main() {
 	fmt.Println("2.Select B for Selection Sort")
 	fmt.Println("3.Select C for Insertion Sort")
 	fmt.Println("4.Select D for Quick Sort")
+	fmt.Println("5.Select E for Merge Sort")
 	fmt.Scan(&sort)
 	switch sort{
 	case "A":
@@ -53,6 +54,11 @@ func main() {
 		quickSort(arr, 0, size-1)
 		fmt.Println("Sorted Array")
 		printArray(arr, size)
+	case "E":
+		fmt.Println("Starting Merge Sort")
+		sortedArray:=mergeSort(arr)
+		fmt.Println("Sorted Array")
+		printArray(sortedArray, size)
 	}
 
 }
