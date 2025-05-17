@@ -48,6 +48,7 @@ func main() {
   fmt.Println("4 for Inserting a node after a node value in a linked list")
   fmt.Println("5 for Inserting a node before a node value in a linked list")
   fmt.Println("6 for Deleting the first node of a linked list")
+  fmt.Println("7 for Deleting the last node of a linked list")
   fmt.Println("10 to EXIT")
   
   loop:
@@ -105,8 +106,20 @@ func main() {
 		print(head)
 	case 6:
 		head=deleteFront(head)
-		fmt.Println("Updated Linked List")
-		print(head)
+		if head==nil{
+			fmt.Println("The Linked List is empty")
+		} else{
+			fmt.Println("Updated Linked List")
+			print(head)
+		}
+	case 7:
+		head,err:=deleteBack(head)
+		if err==nil{
+			fmt.Println("Updated Linked List")
+			print(head)
+		} else{
+			fmt.Println(err)
+		}
 	case 10:
 		fmt.Println("You chose to exit")
 		break loop
