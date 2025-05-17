@@ -33,3 +33,25 @@ func deleteBack(head *Node) (*Node, error){
 	fmt.Println("The last node has been deleted successfully")
 	return head, nil
 }
+
+func deleteAfter(head *Node, value int) error{
+	curr:=head
+
+	for curr.data!=value && curr != nil{
+		curr=curr.next
+	}
+
+	if curr == nil{
+		return fmt.Errorf("node with value %d does not exist",value)
+	}
+
+	if curr.next == nil{
+		return fmt.Errorf("node with value %d is the last node",value)
+	}
+
+	var temp *Node = curr.next
+	fmt.Printf("node after value %d and with data %d is successfully deleted",value,temp.data)
+
+	curr.next=curr.next.next
+	return nil
+}
