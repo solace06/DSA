@@ -21,8 +21,6 @@ func print(head *Node) {
 }
 
 func main() {
-	//Creating a linked list
-
 	var head = new(Node)
 	var second = new(Node)
 	var third = new(Node)
