@@ -17,6 +17,7 @@ func print(head *Node) {
 		fmt.Print(currNode.data, " ")
 		currNode = currNode.next
 	}
+	
 	fmt.Println()
 }
 
