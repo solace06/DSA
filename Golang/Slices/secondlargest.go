@@ -42,6 +42,16 @@ func secondlargest() {
 		}
 	}
 
+	//optimal approach
+	  for i:=0; i<n; i++{
+      if slice[i]>largest{
+          largest=slice[i]
+      }
+      if slice[i]<largest && slice[i]>second_largest{
+          second_largest=slice[i]
+      }
+  }
+
 	fmt.Println("Second largest element is:", second_largest)
 
 }
