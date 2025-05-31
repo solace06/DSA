@@ -1,6 +1,9 @@
 package slices
 
-import "fmt"
+import (
+    "fmt"
+    "sort"
+)
 
 func merge() {
     //merge 2 sorted slices
@@ -41,4 +44,33 @@ func merge() {
     
     fmt.Println("Merged sorted array is:")
     fmt.Println(ans)
+}
+
+func merge2() {
+    //merge 2 sorted slices
+    
+    //Approach 2: using no extra space
+    slice1:=[]int{2,4,6,8}
+    slice2:=[]int{1,3,5,7}
+    
+    i:=len(slice1)-1
+    j:=0
+    
+    for i>=0 && j<len(slice2){
+        if slice1[i]<slice2[j]{
+            break
+        } else{
+            slice1[i],slice2[j]=slice2[j],slice1[i]
+            i--
+            j++
+        }
+    }
+    
+    sort.Ints(slice1)
+    sort.Ints(slice2)
+    
+    fmt.Println("The sorted arrays are as follows")
+    fmt.Println(slice1)
+    fmt.Println(slice2)
+   
 }
