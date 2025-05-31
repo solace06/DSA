@@ -29,4 +29,20 @@ func removeduplicates() {
 		fmt.Print(" ")
 	}
 
+	//removing duplicates from a sorted array
+    //using extra space
+	set:=make(map[int]bool)
+    
+    for _, val:= range slice{
+        if !set[val]{
+            set[val]=true
+        }
+    }
+    
+    fmt.Println("Unique elements in the slice are:")
+    for key, _ :=range set{
+        fmt.Print(key)
+        fmt.Print(" ")
+    }
+
 }
