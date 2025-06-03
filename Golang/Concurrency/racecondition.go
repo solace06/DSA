@@ -5,7 +5,7 @@ import (
 	"time"
 )
 
-//executes successfully but give incorrect results
+//executes successfully but gives incorrect results
 
 func race() {
     var counter int
