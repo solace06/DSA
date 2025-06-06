@@ -28,6 +28,5 @@ func selectChannel() {
             case val:=<-chan2:
                 fmt.Println(val)
         }
-    }
-    
+    }   
 }
