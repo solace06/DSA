@@ -6,7 +6,7 @@ import (
     )
     
     
-func mute() {
+func mutex() {
     var counter = 0
     var wg sync.WaitGroup
     var mu sync.Mutex
