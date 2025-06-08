@@ -49,6 +49,7 @@ func main() {
 	fmt.Println("6 for Deleting the first node of a linked list")
 	fmt.Println("7 for Deleting the last node of a linked list")
 	fmt.Println("8 for Deleting the node of a linked list after a value")
+	fmt.Println("9 for Returning the length of the linked list")
 	fmt.Println("10 to EXIT")
 
 loop:
@@ -132,6 +133,9 @@ loop:
 				fmt.Println("Updated Linked List")
 				print(head)
 			}
+		case 9:
+			length:=calLength(head)
+			fmt.Println("Length of the linked list is:", length)
 		case 10:
 			fmt.Println("You chose to exit")
 			break loop
